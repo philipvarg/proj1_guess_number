@@ -1,8 +1,10 @@
-## Guessing Game
-This is a simple guessing game where the user has a limited number of attempts to guess the correct whole number between 0 and 20. <br>
-Two hints are given. <br>
-You can quit anytime by entering 'q' or 'Q'.<br>
-Typing in alphabets is forgiven and will NOT be penalized.
+## Guessing Game (GUI version)
+This is a number guessing game where user attempts to select the correct number between 1 and 20. <br>
+User gets 10 attempts and 2 hints to win.<br>
+Re-clicking a number is included in the attempt count.<br>
+Exit button - to quit anytime.<br>
+Replay button - appears at the end of each round.
+
 
 
 ## Hints
@@ -11,19 +13,19 @@ Typing in alphabets is forgiven and will NOT be penalized.
 
 ## Example of game
 
-<img src="Screenshot_2025-01-21_at_JupyterLab.png" height = "400" width="400"
+<img src="guessgui.png" height = "444" width="493"
      alt="Missing image..."/>
      
 ## Additional info
-- Uses the random module to generate the guess number
-- Game runs in a While loop which consists of 4 main sections;
-    - 1. user input, error check and abort game
-    - 2. Win condition
-        - reports a Win and prompts player to play again
-    - 3. Lose condition
-        - reports a Lose and prompts player to play again
-    - 4. game in progress
-        - calculates and reports Incorrect with remaining tries, provides hints
+- Uses tkinter for GUI and random module to generate the guess number. 
+- Game runs in a loop which consists of 4 main sections;
+    -  number pad for user input and exit button (breaks loop)
+    -  Win condition
+        - reports a Win with a replay option (continues loop)
+    -  Lose condition
+        - reports a Lose with a replay option (continues loop)
+    -  game in progress
+        - accepts user inputs, calculates remaining tries, provides hints
 - Uses dictionary and conditional statements
-- 71 lines of code
+- 184 lines of code
 - Saved as a Python script
